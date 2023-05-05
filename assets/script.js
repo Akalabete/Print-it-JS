@@ -23,6 +23,13 @@ let urlListe = []
 
 const dots = document.querySelector(".dots")
 const bannerImg = document.querySelector(".banner-img");
+
+// pour changer le texte.
+const textBanner = document.querySelector("#banner");
+
+
+
+console.log(textBanner)
 //création des bulletpoints 
 for (let i = 0; i < slides.length; i++){
 	const imageElement = document.createElement("img");  
@@ -49,6 +56,7 @@ afficherNewPic();
 
 function afficherNewPic(){
 	bannerImg.src = urlListe[activeBubble]
+	textBanner.querySelector('p').innerHTML = slides[activeBubble].tagLine;  // ajout du text
 
 }
 
